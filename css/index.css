@@ -735,6 +735,9 @@ input[id="btcate"]:checked + label + div {left:-23px; top:54px;}
     padding-top: 40px;
     text-align: left;
 }
+.sideBanner{
+    padding-left: 27px;
+}
 .tabList {
     margin-top: 24px;
     text-align: center;

@@ -5,7 +5,7 @@ $(function() {
          $('#normalBanner').css({
          "position":"fixed",
          "top":"-20px",
-         "left":"953px",
+         "left":"1334px",
          "width":"333.75px",
          "bottom":"auto"});
          } else{
@@ -16,5 +16,6 @@ $(function() {
                     "width":"333.75px",
                     "bottom":"auto"});
                 };
+                return false;
             });
         });
