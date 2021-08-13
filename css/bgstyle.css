@@ -1,0 +1,19 @@
+.header .breadCrumb .cateWrap .cateArea {
+    display: none;
+    position: absolute;
+    top: 54px;
+    bottom: 0;
+    left: -240px;
+    min-width: 240px;
+    height: calc(100vh - 160px);
+    margin-left: -23px;
+    background: #fff;
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    opacity: 1;
+    -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    z-index: 101;
+}

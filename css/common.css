@@ -1,0 +1,32 @@
+html{font-size: 10px;}
+.wrapper.headFixed .header .headInner .headUtil>a, .header .headInner .headMid.case nav .btn_hideGnb, .header .headInner .headUtil .recentProd .popLayCont .recentListS li .del, .header .headInner .headUtil .recentProd .popLayCont>button, .header .headSearch .btSearch, .header .headSearch .headsearchWrap .closeS, .header .headSearch .headsearchWrap .searchArea>button, .header .headSearch .headsearchWrap .searchDefault .searWord .inner .recentList li .del, .header .headSearch .headsearchWrap .searchDefault .searWord .popularList li .state, .header .breadCrumb .cateWrap .btcate, .header .breadCrumb .cateWrap .cateArea .brandTabs .close, .header .breadCrumb .cateWrap .cateArea .cateClose, footer>.footInner .footRight .footSns .snsList>a, .asideTop .btTop, .chkFavo label, .chkFavo2 label, .chkPut label, .btIco, .listNum .funcBtns .funcAcct, .pageStep li em, .layPop .closeL, .tipArea .tipCont .closeT, .btTip, .popWrap .closeP, .calenInp .ui-datepicker-trigger, .ui-datepicker .ui-datepicker-header button, .ui-datepicker .close, .frmSel.only label, .searchWrap .btSear, .frmSearch .icoSearch, .filterSearch .icoSearch, .listPaging button, .boardList>li a .tit .new, .swiperWrap .ts-paging .ts-paging-btn, .swiperWrap .ts-prev, .swiperWrap .ts-next {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+html, body, p, a, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, div, figure, article, header, nav, footer, section, button, span {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+    list-style: none;
+    text-decoration: none;
+}
+a:link { color:#1e2023; text-decoration: none;}
+a:visited { color:#1e2023; text-decoration: none;}
+a:hover { color:#1e2023; text-decoration: none;}
+
+
+em, address {
+    font-style: normal;
+}
+body, input, textarea, select, button, table, th, td {
+    font-family: Noto Sans KR, "notokr", "Open Sans", "Helvetica Neue", sans-serif;
+    color: #5a5f64;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    letter-spacing: -0.03em;
+}
