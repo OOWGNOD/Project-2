@@ -8,10 +8,6 @@ $(function() {
          "left":"953px",
          "width":"333.75px",
          "bottom":"auto"});
-         }else if ($(this).scrollTop() >= 500) {
-            $('#mainsd_Banner').css({
-                "display":"block"
-            });
          } else{
                 $('#normalBanner').css({
                     "position":"absolute",
