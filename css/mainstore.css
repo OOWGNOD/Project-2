@@ -1,0 +1,377 @@
+@import url(common.css);
+html{
+    font-size: 10px;
+}
+body, input, textarea, select, button, table, th, td {
+    font-family: Noto Sans KR, "notokr", "Open Sans", "Helvetica Neue", sans-serif;
+    color: #5a5f64;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    letter-spacing: -0.03em;
+}
+ul, ol {
+    list-style: none;
+}
+.mainBannerSwiper .quickMn .moreBtn, .storeList>li .contLink, .storeList>li .brandInfo .brandName .icoN, .sideVideo .btnPlayStop button, .sideVideo .btnSound button, .mainTopbanner .toggleBtn, .mainTopbanner .btn_close, .movieIco, .beautyFinderReault .iScrollWrap>button, .beautyFinderReault .chkKeywordList .item a, .swipeMenu .iScrollWrap>button, .receiveAddr.receiveApList .deliveryArea .btnMap, .liveCont .otWrap .timeTracker .scrollPrev, .liveCont .otWrap .timeTracker .scrollNext, .liveArea .vodControl .chkSound input+label, .liveView .liveClose, .liveView .liveSection .context .chatingArea .chatSubmit {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+img, fieldset, iframe {
+    border: 0;
+    vertical-align: top;
+}
+#wrapper.lnbWrapper .container, #wrapper.mainWrapper .container {
+    width: auto;
+    min-width: 1280px;
+    max-width: 1680px;
+    margin: 56px auto 0;
+    text-align: center;
+
+}
+#wrapper.mainWrapper .contents {
+    width: auto;
+    min-width: 1136px;
+    max-width: 1520px;
+    margin-top: 56px;
+}
+#wrapper>.container .contents {
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+}
+#wrapper.mainWrapper .contents .titDep1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.hidden {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px !important;
+    clip: rect(0 0 0 0);
+}
+.storeTitDep1 {
+    margin-bottom: 32px;
+}
+.titDep1 {
+    margin-bottom: 34px;
+    color: #1e2023;
+    font-size: 3.6rem;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.33;
+    text-align: center;
+}
+.titDep1 .txtSub {
+    display: block;
+    margin-top: 4px;
+    color: #5a5f64;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.tabContentWrap{
+    display:none;
+}
+.tabContentWrap.tabON {
+    display: block;
+}
+.storeListNum {
+    border: 0;
+}
+.listNum {
+    position: relative;
+    height: 47px;
+    color: #6b6e73;
+    text-align: right;
+}
+.listNum .funcBtns.storeView {
+    height: 28px;
+    margin-top: 8px;
+    padding: 0;
+    border: 0;
+}
+.listNum .funcBtns {
+    display: inline-block;
+    height: 20px;
+    padding: 0 10px;
+    border: solid #dcdfe3;
+    border-width: 0 1px;
+}
+.listNum .funcBtns.storeView .funcAcct {
+    text-indent: 0;
+    width: auto;
+    height: 28px;
+    padding-left: 28px;
+    color: #6b6e73;
+}
+.listNum .funcBtns .funcAcct {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.listNum .funcBtns .funcAcct:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/spr_ico.png) no-repeat;
+}
+.listNum .funcBtns.storeView .funcAcct{
+    display:none;
+}
+.listNum .funcBtns.storeView .funcAcct.BtON{
+    display:block;
+}
+.listNum .funcBtns.storeView .funcAcct.btList:before {
+    background-position: -32px 0;
+}
+.listNum .funcBtns.storeView .funcAcct:before {
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+}
+.listNum .funcBtns.storeView .funcAcct.btCard:before {
+    background-position: -12px 0;
+}
+.listNum .funcBtns .funcAcct.btList:before {
+    background-position: -16px -41px;
+}
+.storeList.storeCard .showOnScroll {
+    width: 33.3333%;
+    min-height: 501px;
+    height: auto;
+    opacity: 100;
+}
+.storeList>li {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 176px;
+}
+.storeList>li .inner {
+    position: relative;
+    margin: 0 20px 0px 20px;
+}
+
+.storeList.storeCard>li .inner {
+    margin: 0 8px;
+}
+.storeList.storeCard>li figure {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+.storeList.storeCard>li figure {
+    height: 368px;
+    background: #fff url(../img/bg_prodLogo.png) no-repeat 50% 50%;
+}
+.storeList>li figure {
+    overflow: hidden;
+    position: relative;
+    min-height: 160px;
+    border-radius: 8px;
+    background-color: #f5f7fa;
+}
+.storeList>li figure>img {
+    display: none;
+}
+.storeList.storeCard>li figure>img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.storeList>li figure .imgLogo img {
+    width: 100%;
+}
+.storeList>li figure .imgLogo {
+    position: absolute;
+    z-index: 2;
+    width: 160px;
+    height: 60px;
+    left: 50%;
+    top: 45%;
+    /* transform: translate(-23%); */
+    margin: -10px 0 0 -80px;
+    -webkit-transition: margin-top .3s;
+    transition: margin-top .3s;
+}
+.storeList.storeCard>li figure .imgLogo .logoW {
+    display: block;
+}
+.storeList.storeCard>li .contLink {
+    height: 468px;
+}
+.storeList {
+    margin: 0 -9px 0 -10px;
+}
+.storeList>li {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 176px;
+}
+.brandName {
+    color: #373a3c;
+    font-size: 1.5rem;
+    line-height: 1.53333;
+    font-weight: 700;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+.storeList>li .contLink {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+.storeList.storeCard>li .inner .brandInfo {
+    margin-top: 22px;
+    height: 110px;
+
+}
+.storeList.storeCard>li .brandInfo .brandName strong {
+    display: inline;
+    font-size: 1.8rem;
+    line-height: 1.44444;
+    color: #1e2023;
+}
+.storeList.storeCard>li .brandInfo .brandDesc {
+    line-height: 1.8rem;
+    min-height: 1.8rem;
+    max-height: 3.6rem;
+}
+.storeList.storeCard>li .brandInfo .brandDesc {
+    display: block;
+    padding-top: 4px;
+    font-size: 1.5rem;
+    line-height: 1.53333;
+    color: #8b8f94;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 35px;
+    line-height: 1.5rem;
+    white-space: normal;
+    box-sizing: content-box;
+    word-break: break-all;
+}
+.storeList.storeCard>li .chkFavo {
+    top: 55%;
+    margin-top: 16px;
+}
+.chkFavo.chkFavoL, .chkFavo2.chkFavoL {
+    width: 24px;
+    height: 24px;
+}
+.chkFavo label, .chkFavo2 label {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+}
+.storeList>li .chkFavoL {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 98px;
+    margin-left: -12px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: margin-top .3s,opacity .3s;
+}
+.chkFavo, .chkFavo2 {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: left;
+}
+.storeList.storeCard>li figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+/* .storeList.storeCard>li .chkFavo input+label:after {
+    background-position-x: -44px;
+} */
+#prodStyle-list .storeList >li .inner .brandInfo{
+    display:none;
+}
+.storeList>li .brandInfo .brandDesc {
+    display: none;
+}
+.chkFavo input, .chkFavo2 input {
+    position: absolute;
+    opacity: 0;
+}
+.chkFavo label:after, .chkFavo2 label:after {
+    width: 16px;
+    height: 16px;
+    margin: -9px 0 0 -9px;
+    background: url(../img/spr_favo.png) no-repeat;
+}
+.storeList.storeCard>li .chkFavo input+label:after {
+    background-position-x: -44px;
+}
+.storeList>li .chkFavoL input+label:after {
+    background-position: -18px 0;
+}
+.chkFavo.favoW label:after, .chkFavo2.favoW label:after {
+    background-position: -44px 0;
+}
+.chkFavo.chkFavoL label:after, .chkFavo2.chkFavoL label:after {
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    background-position: -18px 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+.storeList>li .inner:hover >figure .bg {
+transition: transform 0.3s;
+filter: brightness(60%);
+}
+.storeList>li .inner:hover .imgLogo {
+    transition: transform 0.3s;
+    transform: translateY(-30%);
+    }
+    .storeList>li .inner:hover .chkFavoL {
+    transition: transform 0.3s;
+    transform: translateY(-40%);
+    opacity: 100;
+    }
+    .storeList>li .inner:hover .chkFavoL:hover.chkFavo label:after, .chkFavo2 label:after{
+        background: url(../img/spr_favo.png) no-repeat;
+        background-position-y: -52px;
+        background-position-x: -44px;
+        width: 24px;
+        height: 24px;
+    }
+    .storeList>li .inner:hover >figure {
+        background-color: #fff;
+    }

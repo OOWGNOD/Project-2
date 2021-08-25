@@ -1,0 +1,182 @@
+"use strict";
+function initMainModules(){
+	var arr = [],
+		module, banner, bcont, id, obj, pobj, pm;
+	
+	$(".mainModule[data-banner]").each(function(idx, itm){
+		module = $(itm);
+		obj = {
+			start : module,
+			banner : null,
+			bcont : null
+		}
+		
+		// last
+		//pm = module.prev(".mainModule");
+		pm = module.prev();
+		if(pm.length > 0 && typeof(pobj) == "object"){
+			pobj.last = pm;
+		}
+		
+		id = module.data("banner");
+		if(typeof(id) == "string" && id.length > 0){
+			banner = $("#" + id);
+			if(banner.length > 0){
+				obj.banner = banner;
+				obj.bcont = banner.find(".mainSideCont");
+				arr.push(obj);
+			}
+		}
+		pobj = obj;
+	});
+	if(arr.length > 0){
+		if(arr.length == 1 && $(".mainModule[data-banner]").length >= 2){
+			arr[arr.length - 1].last = $($(".mainModule[data-banner]")[1]).prev();
+		}else{
+			arr[arr.length - 1].last = $(".mainModule").last();
+		}
+	}
+	
+	GlobalScroll.addListener(function(d){
+		var scr = d.scroll,
+			wh = d.winHeight,
+			sh = d.hScrollWidth,
+			bh = $("#brendCrumb").outerHeight() + 40,
+			mbhl = $(".mainside_Banner").offset().left - d.scrollLeft,
+			w = $(".mainside_Banner").outerWidth(),
+			len = arr.length,
+			css, mt, obj, s, l, t, b, B, i, bt;
+		
+		for(i=0; i<len; i++){
+			obj = arr[i];
+			banner = obj.banner;
+			bcont = obj.bcont;
+			bt = bh - bcont.position().top;
+			s = obj.start;
+			l = obj.last;
+			
+			mt = parseInt(s.css("margin-top"), 10);
+			if(isNaN(mt)){
+				mt = 0;
+			}
+			css = {
+				position : "absolute",
+				top : s.position().top + mt,
+				left : 0,
+				bottom : "auto",
+				width : w
+			};
+
+			t = s.offset().top - scr;
+			//if(t < bh){
+			if(t < bt){
+				css.position = "fixed";
+				//css.top = bh;
+				css.top = bt;
+				css.left = mbhl;
+			}
+			
+			b = l.offset().top + l.outerHeight() - scr;
+			//B = bh + banner.outerHeight();
+			B = bt + banner.outerHeight();
+			if(b <= B){
+				mt = parseInt(l.css("margin-top"), 10);
+				if(isNaN(mt)){
+					mt = 0;
+				}
+				css.position = "absolute";
+				css.top = l.position().top + mt + l.outerHeight() - banner.outerHeight();
+				css.left = 0;
+			}
+			
+			banner.css(css);
+		}
+	});
+};
+
+/*
+ * Cmall time sale
+ */
+/*function initTimeSale(){
+	var comp = $(".timesaleComponent");
+	if(comp.length <= 0){ return false; }
+	
+	var lis = comp.find(".timepr_list li"),
+		cnt = lis.length,
+		p = 0,
+		t = cnt - 4,
+		prev = comp.find(".ts-prev"),
+		next = comp.find(".ts-next"),
+		li, l, i;
+	
+	function setPosition(){
+		lis.each(function(idx, itm){
+			i = idx - p;
+			li = $(itm);
+			l = 18 * i;
+			if(i >= 2){
+				l += 28;
+			}
+			li.css("left", l + "%");
+		});
+		
+		if(p == 0){
+			prev.addClass("disabled");
+		}else{
+			prev.removeClass("disabled");
+		}
+		if(p == t){
+			next.addClass("disabled");
+		}else{
+			next.removeClass("disabled");
+		}
+	};
+	
+	setPosition();
+	
+	comp.find(".ts-prev, .ts-next").unbind("click.timesale").bind("click.timesale", function(e){
+		var btn = $(e.currentTarget);
+		if(btn.hasClass("disabled")){ return false; }
+		
+		if(btn.hasClass("ts-prev")){
+			if(p > 0){
+				p--;
+				setPosition();
+			}
+		}else{
+			if(p < t){
+				p++;
+				setPosition();
+			}
+		}
+	});
+};// initTimeSale
+*/
+$(function(){
+	initMainModules();
+	//initTimeSale();
+	
+	$(".mainBannerSwiper .quickMn .listWrap a").bind("click", function(e){
+		
+		var a = $(e.currentTarget),
+			li = a.closest("li"),
+			i = li.index(),
+			w = li.closest(".mainBannerSwiper"),
+			sw = w.data("swiper");
+		try{
+			if(window.swiperVersion === 276){
+				sw.swipeTo(i);
+			}else{
+				sw.slideToLoop(i);
+			}
+			/**
+			 * 20210608
+			 * 메인 배너 목록 클릭 시 active 클래스 추가
+			 */
+			a.addClass('active');
+			li.siblings('li').children('a').removeClass('active')
+		}catch(e){}
+		
+		return false;
+	});
+});

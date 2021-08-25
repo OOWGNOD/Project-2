@@ -9,6 +9,6 @@ $(function() {
          // 버튼 클릭시 
          $(".btTop").click(function() { $('html, body').animate({ scrollTop : 0 
             // 0 까지 animation 이동합니다. 
-        }, 400); 
+        }, 300); 
         // 속도 400
          return false; }); });
